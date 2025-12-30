@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Shop</title>
+  <link rel="stylesheet" type="text/css" href="coffee.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Anton&display=swap" rel="stylesheet">
+    <style>
+        /* Testimonial Card Animation */
+        .testimonial-card {
+            background-color: #f8f9fa;
+            border: none;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        /* Subtle hover effect for animation */
+        .testimonial-card:hover {
+            transform: translateY(-5px); /* Move up slightly */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Add shadow */
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/img/img24.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+
+        /* Testimonial Photo Styling */
+        .testimonial-img {
+            width: 220px;
+            height: 220px;
+            oobject-fit: cover;
+        border-radius: 50%;
+        border: 6px solid #ffc107; 
+        padding: 2px; 
+        }
+
+        /* Team Photo Styling */
+        .team-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #adb5bd;
+        }
+    </style>
+</head>
+<body>
+
+     <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="bi bi-cup-hot-fill"></i>
+      CAFFE HUB</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active " href="cofee.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Product</a></li>
+          <li class="nav-item"><a class="nav-link " href="mennu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="contect.html">Contect Us</a></li>
+          
+        </ul>
+
+        <!-- Search Bar -->
+        <form class="d-flex ms-3 search-box">
+          <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
+          <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+
+        <!-- Icons -->
+        <ul class="navbar-nav ms-3">
+     
+          <li class="nav-item"><a class="nav-link" href="login.html"><i class="fa fa-user"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-heart"></i></a></li>
+
+          <div class="ms-auto cart-counter">
+      <button class="btn btn-warning" id="cartBtn" data-bs-toggle="modal" data-bs-target="#cartModal">
+        🛒 <span style="font-weight: bolder;">Cart<span> <span class="cart-count" id="cartCount" >0</span>
+      </button>
+    </div>
+    </div>
+  </nav>
+    </div>
+  </nav>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold">**ABOUT US **</h1>
+            <p class="lead">Learn the story behind our mission to deliver excellence and innovation.</p>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="display-5 mb-3 text-primary"><b>**Our Journey** 🚀</b></h2>
+                    <p class="text-muted"><b style="font-size:20px;">Life is better when it starts with a warm cup of coffee! And if you start your morning with a well-brewed cup too, then this blog is for you! Coffee, to most of us, is more than just a beverage; it's an emotion.</b></p>
+                    <p class="text-muted"><b style="font-size:20px;">We believe in creating sustainable solutions that not only meet today's needs but also anticipate tomorrow's challenges. Our dedicated team works tirelessly to ensure every product and service exceeds expectations.</b></p>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="py-1 bg-dark">
+        <div class="container text-center">
+            <h2 class="mb-5 text-primary">**What Our Clients Say** 🌟</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-center">
+                            <div class="card testimonial-card shadow-sm p-4 mx-2" style="max-width: 600px;">
+                                <img src="assets/img/img26.jpg" class="testimonial-img mx-auto d-block mb-3" alt="Client Photo 1">
+                                <p class="card-text fst-italic">"The level of support and quality of work is unparalleled. They truly understand our needs and deliver exceptional results every time. Highly recommended!"</p>
+                                <footer class="blockquote-footer mt-2">
+                                    <cite title="Source Title">Alex J. - CEO, InnovateTech</cite>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="card testimonial-card shadow-sm p-4 mx-2" style="max-width: 600px;">
+                                <img src="assets/img/img25.jpg" class="testimonial-img mx-auto d-block mb-3" alt="Client Photo 2">
+                                <p class="card-text fst-italic">"Fantastic experience from start to finish. Their team is professional, responsive, and a pleasure to work with. Our project saw immediate success."</p>
+                                <footer class="blockquote-footer mt-2">
+                                    <cite title="Source Title">Sarah L. - Marketing Director</cite>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="card testimonial-card shadow-sm p-4 mx-2" style="max-width: 600px;">
+                                <img src="assets/img/img26.jpg" class="testimonial-img mx-auto d-block mb-3" alt="Client Photo 3">
+                                <p class="card-text fst-italic">"A game-changer for our business. The solutions they provided were tailor-made and incredibly effective. Thank you for your dedication!"</p>
+                                <footer class="blockquote-footer mt-2">
+                                    <cite title="Source Title">Michael K. - Founder, StartUp Hub</cite>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-5 text-primary">**Meet Our Leadership** 🤝</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <img src="assets/img/img26.jpg" class="team-img mb-3" alt="Team Member 1">
+                    <h4>Jane Doe</h4>
+                    <p class="text-muted">Chief Executive Officer</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="assets/img/img25.jpg" class="team-img mb-3" alt="Team Member 2">
+                    <h4>John Smith</h4>
+                    <p class="text-muted">Chief Technology Officer</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="assets/img/img26.jpg" class="team-img mb-3" alt="Team Member 3">
+                    <h4>Emily White</h4>
+                    <p class="text-muted">Head of Operations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2025 Your Company. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

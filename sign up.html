@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <style type="text/css">
+      body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url('assets/img/img22.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    perspective: 1000px; /* Enables 3D space */
+}
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-card {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    text-align: center;
+    transform-style: preserve-3d; /* Allows 3D transforms on children */
+    transition: transform 0.6s ease;
+    animation: slideIn 1s ease-out; /* Entrance animation */
+}
+
+.signup-card:hover {
+    transform: rotateY(10deg) rotateX(5deg); /* 3D hover effect */
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #5a6fd8;
+}
+
+/* Keyframe animation for card entrance */
+@keyframes slideIn {
+    from {
+        transform: translateZ(-100px) rotateY(-90deg);
+        opacity: 0;
+    }
+    to {
+        transform: translateZ(0) rotateY(0deg);
+        opacity: 1;
+    }
+}
+    </style>
+</head>
+<body>
+    
+
+    <div class="signup-container">
+        <div class="signup-card">
+            <h2>Sign Up</h2>
+            <form>
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

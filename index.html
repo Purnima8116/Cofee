@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Shop</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<style type="text/css">
+/*  <product-section>*/
+
+    .menu-header {
+      text-align: center;
+      margin: 40px 0 20px 0;
+    }
+    .menu-header h1 {
+      font-weight: bold;
+      color: #4b2e2e;
+    }
+    .menu-header p {
+      color: #7c6e6e;
+    }
+    .card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      position: relative;
+
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card-title {
+      font-weight: bold;
+      color: #4b2e2e;
+    }
+    .price {
+      color: #c49b63;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .cart-counter {
+      position: relative;
+      display: inline-block;
+    }
+    .cart-count {
+      position: absolute;
+      top: -8px;
+      right: -10px;
+      background: red;
+      color: white;
+      font-size: 0.8rem;
+      padding: 2px 6px;
+      border-radius: 50%;
+    }
+    /* Wishlist Heart */
+    .wishlist {
+      position: absolute;
+      top: 10px;
+      right: 30px;
+      font-size: 1.3rem;
+      color: #bbb;
+      cursor: pointer;
+    }
+    .wishlist.active {
+      color: red;
+    }
+    .brand-logo{
+  height:80px;
+  
+}
+
+ 
+</style>
+<body>
+
+  <div class="head d-flex justify-content-between gap-3">
+          <img src="./Images/coffee.png" class="img" />
+          <h1 class="fs-3 py-3 text-light"><i>Aroma Haven</i></h1>
+</div>
+
+
+
+  
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+    <div class="container">
+      <img src="assets/img/img.png" class="brand-logo me-2">
+ 
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active " href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="product.html">Product</a></li>
+          <li class="nav-item"><a class="nav-link " href="mennu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="contect.html">Contect Us</a></li>
+          
+        </ul>
+
+        <!-- Search Bar -->
+        <form class="d-flex ms-3 search-box">
+          <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
+          <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+
+        <!-- Icons -->
+        <ul class="navbar-nav ms-3">
+     
+          <li class="nav-item"><a class="nav-link" href="login.html"><i class="fa fa-user"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-heart"></i></a></li>
+
+          <div class="ms-auto cart-counter">
+      <button class="btn btn-warning" id="cartBtn" data-bs-toggle="modal" data-bs-target="#cartModal">
+        🛒 <span style="font-weight: bolder;">Cart<span> <span class="cart-count" id="cartCount" >0</span>
+      </button>
+    </div>
+    </div>
+  </nav>
+    </div>
+  </nav>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div id="coffeeCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active" style="background-image: url('assets/img/img22.jpg');">
+        <div class="carousel-caption">
+          <h1>Freshly Brewed Coffee</h1>
+          <p>Start your day with our rich & aromatic blends.</p>
+          <a href="#" class="btn">Order Now</a>
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: url('assets/img/img24.jpg');">
+        <div class="carousel-caption">
+          <h1>Relax. Refresh. Enjoy.</h1>
+          <p>Experience the perfect coffee moments.</p>
+          <a href="#" class="btn">Explore Menu</a>
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: url('assets/img/img22.webp');">
+        <div class="carousel-caption">
+          <h1>Quality Beans, Perfect Taste</h1>
+          <p>From farm to cup — crafted with passion.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#coffeeCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#coffeeCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+
+
+  
+
+</body>
+</html>
